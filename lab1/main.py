@@ -3,13 +3,13 @@ import numpy as np
 import seaborn as sea
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
-from gain_ratio import gain_ratio
+from lab1.gain_ratio import gain_ratio
 
 sea.set()
 
 
 plt.figure(figsize=(12, 7))
-df = pd.read_csv('data/data.csv')
+df = pd.read_csv('../data/data_lab_1.csv')
 print(df.describe())
 
 numeric_columns = df.select_dtypes(include=[np.number]).columns
